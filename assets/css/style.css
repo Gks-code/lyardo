@@ -113,9 +113,10 @@ h1, h2, h3, h4, .serif {
 
 .header-inner {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     height: 80px;
+    gap: 20px;
 }
 
 .logo {
@@ -124,6 +125,7 @@ h1, h2, h3, h4, .serif {
     font-style: italic;
     color: var(--c-purple-dark);
     letter-spacing: -0.5px;
+    display: none;
 }
 
 .nav-links {
@@ -162,6 +164,9 @@ h1, h2, h3, h4, .serif {
 
     .mobile-menu-btn {
         display: inline-flex !important;
+    }
+    .logo {
+        display: none;
     }
 }
 
