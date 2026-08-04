@@ -1,0 +1,273 @@
+/* Home Page Styles */
+
+/* Hero Section */
+.hero {
+    padding: 80px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(211, 184, 232, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.hero-title {
+    font-size: 56px;
+    color: var(--c-text-main);
+    margin-bottom: 24px;
+    line-height: 1.1;
+}
+
+.hero-title span {
+    color: var(--c-purple-dark);
+    font-style: italic;
+}
+
+.hero-subtitle {
+    font-size: 18px;
+    color: var(--c-text-muted);
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+/* Home Layout */
+.home-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+@media (min-width: 992px) {
+    .home-layout {
+        flex-direction: row;
+        align-items: flex-start;
+    }
+}
+
+/* Sidebar Filter */
+.sidebar {
+    width: 100%;
+}
+
+@media (min-width: 992px) {
+    .sidebar {
+        width: 250px;
+        position: sticky;
+        top: 100px;
+    }
+}
+
+.filter-card {
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.filter-title {
+    font-size: 20px;
+    margin-bottom: 24px;
+    color: var(--c-purple-dark);
+    border-bottom: 1px solid rgba(165, 123, 206, 0.2);
+    padding-bottom: 12px;
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    font-size: 15px;
+    color: var(--c-text-muted);
+    transition: color 0.3s;
+}
+
+.checkbox-label:hover {
+    color: var(--c-text-main);
+}
+
+.custom-checkbox {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--c-purple);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    cursor: pointer;
+}
+
+.custom-checkbox:checked {
+    background-color: var(--c-purple-dark);
+    border-color: var(--c-purple-dark);
+}
+
+.custom-checkbox:checked::after {
+    content: "✓";
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Product Grid */
+.product-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 32px;
+}
+
+.product-card {
+    background: var(--c-white);
+    border-radius: 20px;
+    padding: 16px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(211, 184, 232, 0.2);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    border-color: var(--c-purple);
+}
+
+.product-image-wrap {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 4/5;
+    background-color: var(--c-bg);
+    margin-bottom: 20px;
+}
+
+.product-image-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+/* Make anchor inside image wrap fill entire area */
+.product-image-wrap > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.product-image-wrap > a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+    display: block;
+}
+
+.product-card:hover .product-image-wrap img,
+.product-card:hover .product-image-wrap > a img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    z-index: 2;
+}
+
+.fav-btn {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 36px;
+    height: 36px;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--c-text-muted);
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.fav-btn:hover, .fav-btn.active {
+    color: var(--c-pink-dark);
+    background: var(--c-white);
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.product-category,
+.kit-tag,
+.kit-desc,
+.kit-items,
+.product-badge,
+.badge,
+.fav-btn,
+.sidebar {
+    display: none !important;
+}
+
+.product-name {
+    font-size: 20px;
+    color: var(--c-text-main);
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.product-card:hover .product-name {
+    color: var(--c-purple-dark);
+}
+
+.product-price {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--c-text-main);
+    margin-top: auto;
+    margin-bottom: 16px;
+}
+
+.add-btn {
+    width: 100%;
+    background-color: var(--c-yellow-light);
+    color: var(--c-text-main);
+    border: 1px solid var(--c-yellow-dark);
+    padding: 12px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover .add-btn {
+    background-color: var(--c-purple-dark);
+    color: var(--c-white);
+    border-color: var(--c-purple-dark);
+}

@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kit Capilar - Lyardo Cosmetics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+    <style>
+        /* Kit card overrides - slightly wider cards with horizontal layout on desktop */
+        .kit-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 32px;
+            flex: 1;
+        }
+        @media (min-width: 768px) {
+            .kit-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        .kit-card {
+            background: var(--c-white);
+            border-radius: 20px;
+            border: 1px solid rgba(211, 184, 232, 0.2);
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            display: flex;
+            flex-direction: column;
+        }
+        .kit-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-hover);
+            border-color: var(--c-purple);
+        }
+        .kit-image {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .kit-card:hover .kit-image {
+            transform: scale(1.04);
+        }
+        .kit-image-wrap {
+            overflow: hidden;
+            position: relative;
+        }
+        .kit-body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .kit-tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--c-purple-dark);
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .kit-name {
+            font-family: var(--font-serif);
+            font-size: 22px;
+            color: var(--c-text-main);
+            margin-bottom: 10px;
+        }
+        .kit-desc {
+            font-size: 14px;
+            color: var(--c-text-muted);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .kit-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        .kit-item-tag {
+            background: var(--c-purple-light);
+            color: var(--c-purple-dark);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 4px 12px;
+            border-radius: 20px;
+        }
+        .kit-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: auto;
+        }
+        .kit-price {
+            font-size: 22px;
+            font-weight: 600;
+            color: var(--c-purple-dark);
+        }
+        .kit-old-price {
+            font-size: 14px;
+            text-decoration: line-through;
+            color: var(--c-text-muted);
+            margin-left: 6px;
+        }
+        .kit-btn {
+            background: var(--c-yellow);
+            color: var(--c-text-main);
+            border: 1px solid var(--c-yellow-dark);
+            padding: 12px 24px;
+            border-radius: 30px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+        .kit-btn:hover {
+            background: var(--c-purple-dark);
+            color: var(--c-white);
+            border-color: var(--c-purple-dark);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header glass">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Lyardo Cosmetics</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Maquiagem</a>
+                <a href="cosmeticos.html" class="nav-link">Cosméticos</a>
+                <a href="kit-capilar.html" class="nav-link active">Kit Capilar</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn"><span class="material-symbols-outlined">search</span></button>
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" title="Suporte via WhatsApp" class="icon-btn whatsapp-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="cart.html" class="cart-wrapper icon-btn">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-bg-glow" style="background: radial-gradient(circle, rgba(255,245,204,0.6) 0%, rgba(255,255,255,0) 70%);"></div>
+            <h1 class="hero-title">Kits <span style="color: var(--c-yellow-dark);">Capilares</span></h1>
+            <p class="hero-subtitle">Tratamentos completos para cabelos nutridos, brilhantes e cheios de vida. Escolha o kit ideal para a sua rotina capilar.</p>
+        </section>
+
+        <!-- Layout -->
+        <div class="home-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="filter-card glass">
+                    <h2 class="filter-title">Filtre por</h2>
+                    <ul class="filter-list">
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked class="custom-checkbox">
+                                <span>Todos os Kits</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="custom-checkbox">
+                                <span>Kit Iniciante</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="custom-checkbox">
+                                <span>Kit Premium</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="custom-checkbox">
+                                <span>Kit Presente</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Kit Grid -->
+            <!-- Kit Grid -->
+            <div class="product-grid">
+
+                <!-- Kit 1 -->
+                <div class="product-card" data-id="kt1" data-name="Kit Glow Completo" data-price="379.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC0tsgst4AT_MyfxAxxVa6RK9OweGylTypFQBjyA1VvygTU917ghd-sHfvxR9ZgN5DVmOMoGmtxhY28lImnJ_S89yDGrMZ_byl4fWbt_XWdLeva4jb-m7vasBmN6Jh9La6CXKc31fwE56AsS0A-x1LgbfEAUanLl9bdv2eVrzZGsBUuglEamrFPjwRKbMG9ihGyCYOurrB6-1bf6D9RdZoHekQyCVEkTcUDuK8iJkDAgNXhriJD3dc">
+                    <div class="product-image-wrap">
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0tsgst4AT_MyfxAxxVa6RK9OweGylTypFQBjyA1VvygTU917ghd-sHfvxR9ZgN5DVmOMoGmtxhY28lImnJ_S89yDGrMZ_byl4fWbt_XWdLeva4jb-m7vasBmN6Jh9La6CXKc31fwE56AsS0A-x1LgbfEAUanLl9bdv2eVrzZGsBUuglEamrFPjwRKbMG9ihGyCYOurrB6-1bf6D9RdZoHekQyCVEkTcUDuK8iJkDAgNXhriJD3dc" alt="Kit Glow Completo" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Glow Completo</h3></a>
+                        <span class="product-price">R$ 379,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+                <!-- Kit 2 -->
+                <div class="product-card" data-id="kt2" data-name="Kit Skincare Básico" data-price="310.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM">
+                    <div class="product-image-wrap">
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM" alt="Kit Skincare Básico" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Skincare Básico</h3></a>
+                        <span class="product-price">R$ 310,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+                <!-- Kit 3 -->
+                <div class="product-card" data-id="kt3" data-name="Kit Presente Luxo" data-price="490.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc">
+                    <div class="product-image-wrap">
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc" alt="Kit Presente Luxo" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Presente Luxo</h3></a>
+                        <span class="product-price">R$ 490,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+                <!-- Kit 4 -->
+                <div class="product-card" data-id="kt4" data-name="Kit Maquiagem Completa" data-price="425.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Z5BpRGdySHnOQaP8VS2f0lZS2I7jliRbS4zHpnO_BbMyUqja8exnxEb1_maMDLipjs3kDk0ZLYSCOInf9zSV2AsLQbG3Y2mSmwcwcEhes8hnc9B_i80Kx0q-_GwIyUTO16ub_r5KnftP8DthkplcKx4yuZkRk8azC1e6-wZGlIGZB9MKZBsQ7TvYc5v6DqoCo7bkj-HDXES6y2qqDwG4toehgekKiQbz93QBCBo4-1Ks_uweJkM">
+                    <div class="product-image-wrap">
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Z5BpRGdySHnOQaP8VS2f0lZS2I7jliRbS4zHpnO_BbMyUqja8exnxEb1_maMDLipjs3kDk0ZLYSCOInf9zSV2AsLQbG3Y2mSmwcwcEhes8hnc9B_i80Kx0q-_GwIyUTO16ub_r5KnftP8DthkplcKx4yuZkRk8azC1e6-wZGlIGZB9MKZBsQ7TvYc5v6DqoCo7bkj-HDXES6y2qqDwG4toehgekKiQbz93QBCBo4-1Ks_uweJkM" alt="Kit Maquiagem Completa" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Maquiagem Completa</h3></a>
+                        <span class="product-price">R$ 425,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="logo">Lyardo Cosmetics</h3>
+                <p>Luminous Elegance in every drop. Descubra sua rotina de beleza refinada.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Loja</h4>
+                <div class="footer-links">
+                    <a href="index.html">Maquiagem</a>
+                    <a href="cosmeticos.html">Cosméticos</a>
+                    <a href="kit-capilar.html">Kit Capilar</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Ajuda</h4>
+                <div class="footer-links">
+                    <a href="#">Contato</a>
+                    <a href="#">Frete e Entregas</a>
+                    <a href="#">Devoluções</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <div class="footer-links">
+                    <a href="#">Termos de Serviço</a>
+                    <a href="#">Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            &copy; 2026 Lyardo Cosmetics. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toast-container"></div>
+    <script src="assets/js/cart-store.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cosméticos - Lyardo Cosmetics</title>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header glass">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Lyardo Cosmetics</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Maquiagem</a>
+                <a href="cosmeticos.html" class="nav-link active">Cosméticos</a>
+                <a href="kit-capilar.html" class="nav-link">Kit Capilar</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn"><span class="material-symbols-outlined">search</span></button>
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" title="Suporte via WhatsApp" class="icon-btn whatsapp-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="cart.html" class="cart-wrapper icon-btn">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-bg-glow" style="background: radial-gradient(circle, rgba(252, 210, 223, 0.4) 0%, rgba(255,255,255,0) 70%);"></div>
+            <h1 class="hero-title">Beleza que <span style="color: var(--c-pink-dark);">Transforma</span></h1>
+            <p class="hero-subtitle">Cosméticos de alta performance formulados para realçar a sua beleza com ingredientes selecionados e texturas irresistíveis.</p>
+        </section>
+
+        <!-- Layout -->
+        <div class="home-layout">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <div class="filter-card glass">
+                    <h2 class="filter-title">Categorias</h2>
+                    <ul class="filter-list">
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked class="custom-checkbox">
+                                <span>Hidratantes</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="custom-checkbox">
+                                <span>Séruns</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="custom-checkbox">
+                                <span>Limpeza</span>
+                            </label>
+                        </li>
+                        <li>
+                            <label class="checkbox-label">
+                                <input type="checkbox" class="custom-checkbox">
+                                <span>Protetor Solar</span>
+                            </label>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+            <!-- Grid -->
+            <div class="product-grid">
+
+                <!-- Prod 1 -->
+                <div class="product-card" data-id="sk1" data-name="Sérum Vitamina C Radiante" data-price="220.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM">
+                    <div class="product-image-wrap">
+                        <div class="product-badge"><span class="badge badge-pink">Mais Vendido</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM" alt="Sérum" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Sérum</span>
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Sérum Vitamina C Radiante</h3></a>
+                        <span class="product-price">R$ 220,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+                <!-- Prod 2 -->
+                <div class="product-card" data-id="sk2" data-name="Hidratante Facial Glow" data-price="175.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc">
+                    <div class="product-image-wrap">
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc" alt="Hidratante" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Hidratante</span>
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Hidratante Facial Glow</h3></a>
+                        <span class="product-price">R$ 175,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+                <!-- Prod 3 -->
+                <div class="product-card" data-id="sk3" data-name="Protetor Solar Velvet FPS 60" data-price="148.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkv9h5kUcodv0IYFzxuyhqi8CYRVYX_7gVFaBClgTWi4AopuMtUWA1ep_qUK7Gj-HJTo1-8JOzsZ5zwM6Q-1UqFBh4333h9B_kwBM3SSK7qZ7UReWJQ4-cDKUUaK97rci1KVWivoWJN7hxg-NSIYOAgdRrU7OJYvFxzrwk7CEDPFFEL-pzHjVxKNeK2pVRi7akBt-LCm67IqjiMn5kT0_C5x4g3iDKHoWVgIQH3aExYa6LQYzTI">
+                    <div class="product-image-wrap">
+                        <div class="product-badge"><span class="badge badge-yellow">Novo</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkv9h5kUcodv0IYFzxuyhqi8CYRVYX_7gVFaBClgTWi4AopuMtUWA1ep_qUK7Gj-HJTo1-8JOzsZ5zwM6Q-1UqFBh4333h9B_kwBM3SSK7qZ7UReWJQ4-cDKUUaK97rci1KVWivoWJN7hxg-NSIYOAgdRrU7OJYvFxzrwk7CEDPFFEL-pzHjVxKNeK2pVRi7akBt-LCm67IqjiMn5kT0_C5x4g3iDKHoWVgIQH3aExYa6LQYzTI" alt="Protetor Solar" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Protetor Solar</span>
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Protetor Solar Velvet FPS 60</h3></a>
+                        <span class="product-price">R$ 148,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+                <!-- Prod 4 -->
+                <div class="product-card" data-id="sk4" data-name="Óleo de Rosa Mosqueta" data-price="195.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuA9_Ht4IKr-4Dn5xL1zhRoc5mcPFsp25SnS3RZktTTb9taeX_LEX8Sn8RwGbA70slzSqfv4pUhl2FKcd_Vbll2d6iTlBfdBTXLV2qPP9Nx3qntVSM4U8Qs6xMcay3tZMTK_i_u8MCs7DgPn3Rk5HJcESory3_vjmDJ32E4j8zR-L8AEVNE8pnRaQxDV7EVW6Lm-SrkKQwBWbfujY9X9Ca50hHSaX9hYSTGpIFwf-0K-Bp9voW3z8yI">
+                    <div class="product-image-wrap">
+                        <button class="fav-btn active"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; color: var(--c-pink-dark);">favorite</span></button>
+                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9_Ht4IKr-4Dn5xL1zhRoc5mcPFsp25SnS3RZktTTb9taeX_LEX8Sn8RwGbA70slzSqfv4pUhl2FKcd_Vbll2d6iTlBfdBTXLV2qPP9Nx3qntVSM4U8Qs6xMcay3tZMTK_i_u8MCs7DgPn3Rk5HJcESory3_vjmDJ32E4j8zR-L8AEVNE8pnRaQxDV7EVW6Lm-SrkKQwBWbfujY9X9Ca50hHSaX9hYSTGpIFwf-0K-Bp9voW3z8yI" alt="Óleo" style="width:100%;height:100%;object-fit:cover;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Óleo Facial</span>
+                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Óleo de Rosa Mosqueta</h3></a>
+                        <span class="product-price">R$ 195,00</span>
+                        <button class="add-btn add-to-cart-quick">Adicionar à Sacola</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="logo">Lyardo Cosmetics</h3>
+                <p>Luminous Elegance in every drop. Descubra sua rotina de beleza refinada.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Loja</h4>
+                <div class="footer-links">
+                    <a href="index.html">Maquiagem</a>
+                    <a href="cosmeticos.html">Cosméticos</a>
+                    <a href="kit-capilar.html">Kit Capilar</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Ajuda</h4>
+                <div class="footer-links">
+                    <a href="#">Contato</a>
+                    <a href="#">Frete e Entregas</a>
+                    <a href="#">Devoluções</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <div class="footer-links">
+                    <a href="#">Termos de Serviço</a>
+                    <a href="#">Privacidade</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            &copy; 2026 Lyardo Cosmetics. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <div class="toast-container" id="toast-container"></div>
+    <script src="assets/js/cart-store.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

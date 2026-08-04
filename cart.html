@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sua Sacola - Lyardo Cosmetics</title>
+    
+    <!-- Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header glass">
+        <div class="container header-inner">
+            <a href="index.html" class="logo">Lyardo Cosmetics</a>
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Maquiagem</a>
+                <a href="cosmeticos.html" class="nav-link">Cosméticos</a>
+                <a href="kit-capilar.html" class="nav-link">Kit Capilar</a>
+            </nav>
+            <div class="header-actions">
+                <button class="icon-btn"><span class="material-symbols-outlined">search</span></button>
+                <a href="https://wa.me/5500000000000" target="_blank" rel="noopener noreferrer" title="Suporte via WhatsApp" class="icon-btn whatsapp-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="22" height="22" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                </a>
+                <a href="cart.html" class="cart-wrapper icon-btn">
+                    <span class="material-symbols-outlined">shopping_bag</span>
+                    <span class="cart-badge" id="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container cart-section">
+        
+        <div class="cart-header">
+            <h1 class="cart-title serif">Sua Sacola</h1>
+            <p class="cart-subtitle">Revise seus itens exclusivos antes de finalizar.</p>
+        </div>
+
+        <div class="cart-layout">
+            
+            <!-- Items -->
+            <div class="cart-items-container" id="cart-items-container">
+                <!-- Rendered via JS -->
+            </div>
+
+            <!-- Summary -->
+            <aside class="cart-sidebar">
+                <div class="summary-card">
+                    <h2 class="summary-title serif">Resumo do Pedido</h2>
+                    
+                    <div class="summary-row">
+                        <span>Subtotal</span>
+                        <span id="subtotal-display">R$ 0,00</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Frete</span>
+                        <span>Grátis</span>
+                    </div>
+                    
+                    <div class="summary-row">
+                        <span>Impostos Estimados</span>
+                        <span id="tax-display">R$ 0,00</span>
+                    </div>
+
+                    <div class="summary-row total">
+                        <span>Total</span>
+                        <span id="total-display">R$ 0,00</span>
+                    </div>
+
+                    <button class="btn-checkout" id="checkout-btn">
+                        Finalizar Compra
+                        <span class="material-symbols-outlined">arrow_forward</span>
+                    </button>
+
+                    <p class="secure-msg">
+                        <span class="material-symbols-outlined" style="font-size: 16px;">lock</span>
+                        Pagamento 100% Seguro
+                    </p>
+                </div>
+            </aside>
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <h3 class="logo">Lyardo Cosmetics</h3>
+                <p>Luminous Elegance in every drop. Descubra sua rotina de beleza refinada.</p>
+            </div>
+            <!-- Outras colunas... omitidas para brevidade -->
+        </div>
+        <div class="container footer-bottom">
+            &copy; 2026 Lyardo Cosmetics. Todos os direitos reservados.
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toast-container"></div>
+
+    <!-- Scripts -->
+    <script src="assets/js/cart-store.js"></script>
+    <script src="assets/js/cart.js"></script>
+</body>
+</html>
