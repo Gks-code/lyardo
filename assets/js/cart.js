@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
                 <div class="cart-item-details">
                     <div class="cart-item-top">
-                        <div>
+                        <div style="flex: 1;">
                             <h3 class="cart-item-name">${item.name}</h3>
                             <p class="cart-item-variant">Variante: ${item.variant}</p>
                         </div>
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </div>
                         <button class="remove-btn" data-action="remove" data-id="${item.id}" data-variant="${item.variant}">
                             <span class="material-symbols-outlined" style="font-size:20px;">delete</span>
-                            <span>Remover</span>
+                            <span class="remove-text">Remover</span>
                         </button>
                     </div>
                 </div>
@@ -130,11 +130,79 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ─── Checkout ───────────────────────────────────────────────────────────────
     const checkoutBtn = document.getElementById('checkout-btn');
+    const checkoutForm = document.getElementById('checkout-form');
     if (checkoutBtn) {
-        checkoutBtn.addEventListener('click', () => {
+        checkoutBtn.addEventListener('click', (e) => {
+            e.preventDefault();
             if (window.CartStore.getCart().length === 0) return;
-            window.CartStore.showToast('Finalizando pedido...');
-            setTimeout(() => alert('Checkout concluído! Obrigado por comprar na Lyardo Cosmetics. 🛍️'), 1000);
+
+            if (checkoutForm && !checkoutForm.checkValidity()) {
+                checkoutForm.reportValidity();
+                return;
+            }
+
+            const nome = document.getElementById('f-nome').value;
+            const cep = document.getElementById('f-cep').value;
+            const endereco = document.getElementById('f-endereco').value;
+            const complemento = document.getElementById('f-complemento').value;
+            const referencia = document.getElementById('f-referencia').value;
+            const bairro = document.getElementById('f-bairro').value;
+            const cidade = document.getElementById('f-cidade').value;
+            const estado = document.getElementById('f-estado').value;
+
+            const cart = window.CartStore.getCart();
+            const subtotal = cart.reduce((sum, item) => sum + item.price * item.qty, 0);
+            const tax = subtotal * 0.08;
+            const total = subtotal + tax;
+            const fmt = val => `R$ ${val.toFixed(2).replace('.', ',')}`;
+
+            let msg = `*Novo Pedido*\n\n`;
+            msg += `*Itens:*\n`;
+            cart.forEach(item => {
+                msg += `- ${item.qty}x ${item.name} (${item.variant}) - ${fmt(item.price * item.qty)}\n`;
+            });
+            msg += `\n*Subtotal:* ${fmt(subtotal)}`;
+            msg += `\n*Frete:* Grátis`;
+            msg += `\n*Impostos:* ${fmt(tax)}`;
+            msg += `\n*Total:* ${fmt(total)}\n\n`;
+            msg += `*Dados de Entrega:*\n`;
+            msg += `Nome: ${nome}\n`;
+            msg += `CEP: ${cep}\n`;
+            msg += `Endereço: ${endereco}`;
+            if (complemento) msg += ` - ${complemento}`;
+            msg += `\nBairro: ${bairro}\n`;
+            msg += `Cidade: ${cidade} - ${estado}\n`;
+            if (referencia) msg += `Ref: ${referencia}\n`;
+
+            const encodedMsg = encodeURIComponent(msg);
+            const waUrl = `https://wa.me/5545988127886?text=${encodedMsg}`;
+            
+            window.open(waUrl, '_blank');
+        });
+    }
+
+    // ─── CEP Autocomplete ───────────────────────────────────────────────────────
+    const cepInput = document.getElementById('f-cep');
+    if (cepInput) {
+        cepInput.addEventListener('blur', async (e) => {
+            let cep = e.target.value.replace(/\D/g, '');
+            if (cep.length === 8) {
+                try {
+                    const res = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
+                    const data = await res.json();
+                    if (!data.erro) {
+                        document.getElementById('f-endereco').value = data.logradouro || '';
+                        document.getElementById('f-bairro').value = data.bairro || '';
+                        document.getElementById('f-cidade').value = data.localidade || '';
+                        document.getElementById('f-estado').value = data.uf || '';
+                        
+                        // Focus number or complement
+                        document.getElementById('f-endereco').focus();
+                    }
+                } catch (err) {
+                    console.error("Erro ao buscar CEP", err);
+                }
+            }
         });
     }
 

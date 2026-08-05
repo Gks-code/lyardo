@@ -109,6 +109,7 @@ h1, h2, h3, h4, .serif {
     position: relative;
     border-bottom: 1px solid rgba(211, 184, 232, 0.2);
     pointer-events: auto;
+    z-index: 1000;
 }
 
 .header-inner {
@@ -265,6 +266,16 @@ h1, h2, h3, h4, .serif {
 
 .cart-badge.pop {
     transform: translate(25%, -25%) scale(1.3);
+}
+
+@keyframes cartBump {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2) translateY(-4px); }
+    100% { transform: scale(1) translateY(0); }
+}
+
+.cart-wrapper.bump {
+    animation: cartBump 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* Footer */

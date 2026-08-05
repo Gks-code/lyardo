@@ -84,6 +84,14 @@ function updateCartBadges() {
             badge.classList.add('pop');
         }
     });
+
+    const wrappers = document.querySelectorAll('.cart-wrapper');
+    wrappers.forEach(wrapper => {
+        wrapper.classList.remove('bump');
+        void wrapper.offsetWidth;
+        wrapper.classList.add('bump');
+        setTimeout(() => wrapper.classList.remove('bump'), 400);
+    });
 }
 
 document.addEventListener('DOMContentLoaded', updateCartBadges);
