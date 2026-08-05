@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
@@ -46,119 +46,171 @@
                 <div class="filter-card glass">
                     <h2 class="filter-title">Categorias</h2>
                     <ul class="filter-list">
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" checked class="custom-checkbox">
-                                <span>Hidratantes</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="custom-checkbox">
-                                <span>Séruns</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="custom-checkbox">
-                                <span>Limpeza</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="custom-checkbox">
-                                <span>Protetor Solar</span>
-                            </label>
-                        </li>
+                        <li><label class="checkbox-label"><input type="checkbox" checked class="custom-checkbox"><span>Todos</span></label></li>
+                        <li><label class="checkbox-label"><input type="checkbox" class="custom-checkbox"><span>Cabelo</span></label></li>
+                        <li><label class="checkbox-label"><input type="checkbox" class="custom-checkbox"><span>Corpo</span></label></li>
+                        <li><label class="checkbox-label"><input type="checkbox" class="custom-checkbox"><span>Skincare</span></label></li>
                     </ul>
                 </div>
             </aside>
 
-            <!-- Grid -->
+            <!-- Grid Cosméticos -->
             <div class="product-grid">
 
-                <!-- Prod 1 -->
-                <div class="product-card" data-id="sk1" data-name="Sérum Vitamina C Radiante" data-price="220.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM">
+                <!-- sk1 - Óleo de Cabelo Bebelo (Variações) -->
+                <div class="product-card" data-id="sk1" data-name="Óleo de Cabelo Bebelo" data-price="19" data-img="https://placehold.co/400x400/e8f5e9/2e7d32?text=%C3%93leo+Bebelo" data-variants="Uva,Melancia,Tuti Fruto,Banana">
                     <div class="product-image-wrap">
-                        <div class="product-badge"><span class="badge badge-pink">Mais Vendido</span></div>
+                        <div class="product-badge"><span class="badge badge-pink">4 Sabores</span></div>
                         <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM" alt="Sérum" style="width:100%;height:100%;object-fit:cover;">
+                        <a href="product.html?id=sk1" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/e8f5e9/2e7d32?text=%C3%93leo+Bebelo" alt="Óleo de Cabelo Bebelo" style="width:100%;height:100%;object-fit:contain;">
                         </a>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Sérum</span>
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Sérum Vitamina C Radiante</h3></a>
-                        <span class="product-price">R$ 220,00</span>
+                        <span class="product-category">Cabelo</span>
+                        <a href="product.html?id=sk1" style="text-decoration:none;"><h3 class="product-name serif">Óleo de Cabelo Bebelo</h3></a>
+                        <span class="product-price">R$ 19,00</span>
                         <div class="product-actions">
                             <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
+                            <a href="product.html?id=sk1" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Prod 2 -->
-                <div class="product-card" data-id="sk2" data-name="Hidratante Facial Glow" data-price="175.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc">
+                <!-- sk2 - Esfoliante Bio Instinto (Variações) -->
+                <div class="product-card" data-id="sk2" data-name="Esfoliante Bio Instinto" data-price="14" data-img="https://placehold.co/400x400/fce8e8/c0392b?text=Esfoliante" data-variants="Framboesa,Morango,Maracujá,Cereja">
                     <div class="product-image-wrap">
+                        <div class="product-badge"><span class="badge badge-yellow">4 Sabores</span></div>
                         <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc" alt="Hidratante" style="width:100%;height:100%;object-fit:cover;">
+                        <a href="product.html?id=sk2" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/fce8e8/c0392b?text=Esfoliante" alt="Esfoliante Bio Instinto" style="width:100%;height:100%;object-fit:contain;">
                         </a>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Hidratante</span>
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Hidratante Facial Glow</h3></a>
-                        <span class="product-price">R$ 175,00</span>
+                        <span class="product-category">Corpo</span>
+                        <a href="product.html?id=sk2" style="text-decoration:none;"><h3 class="product-name serif">Esfoliante Bio Instinto</h3></a>
+                        <span class="product-price">R$ 14,00</span>
                         <div class="product-actions">
                             <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
+                            <a href="product.html?id=sk2" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Prod 3 -->
-                <div class="product-card" data-id="sk3" data-name="Protetor Solar Velvet FPS 60" data-price="148.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkv9h5kUcodv0IYFzxuyhqi8CYRVYX_7gVFaBClgTWi4AopuMtUWA1ep_qUK7Gj-HJTo1-8JOzsZ5zwM6Q-1UqFBh4333h9B_kwBM3SSK7qZ7UReWJQ4-cDKUUaK97rci1KVWivoWJN7hxg-NSIYOAgdRrU7OJYvFxzrwk7CEDPFFEL-pzHjVxKNeK2pVRi7akBt-LCm67IqjiMn5kT0_C5x4g3iDKHoWVgIQH3aExYa6LQYzTI">
+                <!-- sk3 - Gel Creme Facial Kiwi Melu -->
+                <div class="product-card" data-id="sk3" data-name="Gel Creme Facial Kiwi Melu" data-price="13" data-img="https://placehold.co/400x400/e8f5e9/388e3c?text=Gel+Kiwi+Melu">
                     <div class="product-image-wrap">
-                        <div class="product-badge"><span class="badge badge-yellow">Novo</span></div>
+                        <div class="product-badge"><span class="badge badge-pink">Novo</span></div>
                         <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTkv9h5kUcodv0IYFzxuyhqi8CYRVYX_7gVFaBClgTWi4AopuMtUWA1ep_qUK7Gj-HJTo1-8JOzsZ5zwM6Q-1UqFBh4333h9B_kwBM3SSK7qZ7UReWJQ4-cDKUUaK97rci1KVWivoWJN7hxg-NSIYOAgdRrU7OJYvFxzrwk7CEDPFFEL-pzHjVxKNeK2pVRi7akBt-LCm67IqjiMn5kT0_C5x4g3iDKHoWVgIQH3aExYa6LQYzTI" alt="Protetor Solar" style="width:100%;height:100%;object-fit:cover;">
+                        <a href="product.html?id=sk3" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/e8f5e9/388e3c?text=Gel+Kiwi+Melu" alt="Gel Creme Facial Kiwi Melu" style="width:100%;height:100%;object-fit:contain;">
                         </a>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Protetor Solar</span>
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Protetor Solar Velvet FPS 60</h3></a>
-                        <span class="product-price">R$ 148,00</span>
+                        <span class="product-category">Skincare</span>
+                        <a href="product.html?id=sk3" style="text-decoration:none;"><h3 class="product-name serif">Gel Creme Facial Kiwi Melu</h3></a>
+                        <span class="product-price">R$ 13,00</span>
                         <div class="product-actions">
                             <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
+                            <a href="product.html?id=sk3" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Prod 4 -->
-                <div class="product-card" data-id="sk4" data-name="Óleo de Rosa Mosqueta" data-price="195.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuA9_Ht4IKr-4Dn5xL1zhRoc5mcPFsp25SnS3RZktTTb9taeX_LEX8Sn8RwGbA70slzSqfv4pUhl2FKcd_Vbll2d6iTlBfdBTXLV2qPP9Nx3qntVSM4U8Qs6xMcay3tZMTK_i_u8MCs7DgPn3Rk5HJcESory3_vjmDJ32E4j8zR-L8AEVNE8pnRaQxDV7EVW6Lm-SrkKQwBWbfujY9X9Ca50hHSaX9hYSTGpIFwf-0K-Bp9voW3z8yI">
+                <!-- sk4 - Gelatina Capilar Bio Instinto (Variações) -->
+                <div class="product-card" data-id="sk4" data-name="Gelatina Capilar Bio Instinto" data-price="14" data-img="https://placehold.co/400x400/f9e8f5/9c5fb5?text=Gelatina+Capilar" data-variants="Rosa Mosqueta,Cereja,Framboesa">
                     <div class="product-image-wrap">
-                        <button class="fav-btn active"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1; color: var(--c-pink-dark);">favorite</span></button>
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9_Ht4IKr-4Dn5xL1zhRoc5mcPFsp25SnS3RZktTTb9taeX_LEX8Sn8RwGbA70slzSqfv4pUhl2FKcd_Vbll2d6iTlBfdBTXLV2qPP9Nx3qntVSM4U8Qs6xMcay3tZMTK_i_u8MCs7DgPn3Rk5HJcESory3_vjmDJ32E4j8zR-L8AEVNE8pnRaQxDV7EVW6Lm-SrkKQwBWbfujY9X9Ca50hHSaX9hYSTGpIFwf-0K-Bp9voW3z8yI" alt="Óleo" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="product-badge"><span class="badge badge-yellow">3 Sabores</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=sk4" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/f9e8f5/9c5fb5?text=Gelatina+Capilar" alt="Gelatina Capilar Bio Instinto" style="width:100%;height:100%;object-fit:contain;">
                         </a>
                     </div>
                     <div class="product-info">
-                        <span class="product-category">Óleo Facial</span>
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Óleo de Rosa Mosqueta</h3></a>
-                        <span class="product-price">R$ 195,00</span>
+                        <span class="product-category">Cabelo</span>
+                        <a href="product.html?id=sk4" style="text-decoration:none;"><h3 class="product-name serif">Gelatina Capilar Bio Instinto</h3></a>
+                        <span class="product-price">R$ 14,00</span>
                         <div class="product-actions">
                             <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
+                            <a href="product.html?id=sk4" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sk5 - Anti Acne Nativa Brasil -->
+                <div class="product-card" data-id="sk5" data-name="Anti Acne Nativa Brasil" data-price="6" data-img="https://placehold.co/400x400/e8f5e9/1b5e20?text=Anti+Acne">
+                    <div class="product-image-wrap">
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=sk5" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/e8f5e9/1b5e20?text=Anti+Acne" alt="Anti Acne Nativa Brasil" style="width:100%;height:100%;object-fit:contain;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Skincare</span>
+                        <a href="product.html?id=sk5" style="text-decoration:none;"><h3 class="product-name serif">Anti Acne Nativa Brasil</h3></a>
+                        <span class="product-price">R$ 6,00</span>
+                        <div class="product-actions">
+                            <button class="add-btn add-to-cart-quick">COMPRAR</button>
+                            <a href="product.html?id=sk5" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sk6 - Creme Hidratante Nativa Brasil Rosa Mosqueta -->
+                <div class="product-card" data-id="sk6" data-name="Creme Hidratante Nativa Brasil Rosa Mosqueta" data-price="6" data-img="https://placehold.co/400x400/fde8f0/c2185b?text=Creme+Nativa">
+                    <div class="product-image-wrap">
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=sk6" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/fde8f0/c2185b?text=Creme+Nativa" alt="Creme Hidratante Nativa Brasil" style="width:100%;height:100%;object-fit:contain;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Skincare</span>
+                        <a href="product.html?id=sk6" style="text-decoration:none;"><h3 class="product-name serif">Hidratante Nativa Brasil</h3></a>
+                        <span class="product-price">R$ 6,00</span>
+                        <div class="product-actions">
+                            <button class="add-btn add-to-cart-quick">COMPRAR</button>
+                            <a href="product.html?id=sk6" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sk7 - Hidratante Desodorante Bio Instinto (Variações) -->
+                <div class="product-card" data-id="sk7" data-name="Hidratante Desodorante Bio Instinto" data-price="15" data-img="https://placehold.co/400x400/e3f2fd/1565c0?text=Hidrat.+Bio" data-variants="Milk,Maracujá,Morango,Orquídea,Vanilla">
+                    <div class="product-image-wrap">
+                        <div class="product-badge"><span class="badge badge-pink">5 Sabores</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=sk7" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/e3f2fd/1565c0?text=Hidrat.+Bio" alt="Hidratante Desodorante Bio Instinto" style="width:100%;height:100%;object-fit:contain;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Corpo</span>
+                        <a href="product.html?id=sk7" style="text-decoration:none;"><h3 class="product-name serif">Hidratante Desodorante Bio Instinto</h3></a>
+                        <span class="product-price">R$ 15,00</span>
+                        <div class="product-actions">
+                            <button class="add-btn add-to-cart-quick">COMPRAR</button>
+                            <a href="product.html?id=sk7" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- sk8 - Creme Corporal Mix Glow (Variações) -->
+                <div class="product-card" data-id="sk8" data-name="Creme Corporal Mix Glow" data-price="12" data-img="https://placehold.co/400x400/fff5cc/b8860b?text=Creme+Mix" data-variants="Vital Bumbum,Corpo Mix Glow,Snakrw,Tuti Fruto,Melancia,Morango">
+                    <div class="product-image-wrap">
+                        <div class="product-badge"><span class="badge badge-yellow">6 Versões</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=sk8" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/fff5cc/b8860b?text=Creme+Mix" alt="Creme Corporal Mix Glow" style="width:100%;height:100%;object-fit:contain;">
+                        </a>
+                    </div>
+                    <div class="product-info">
+                        <span class="product-category">Corpo</span>
+                        <a href="product.html?id=sk8" style="text-decoration:none;"><h3 class="product-name serif">Creme Corporal Mix Glow</h3></a>
+                        <span class="product-price">R$ 12,00</span>
+                        <div class="product-actions">
+                            <button class="add-btn add-to-cart-quick">COMPRAR</button>
+                            <a href="product.html?id=sk8" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
                         </div>
                     </div>
                 </div>
@@ -208,3 +260,5 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+

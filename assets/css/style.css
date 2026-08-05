@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
+﻿@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap');
 
 :root {
     /* Color Palette */
@@ -531,7 +531,7 @@ main {
     width: 60px;
     height: 60px;
     border-radius: 8px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .search-result-info h4 {
@@ -545,3 +545,4 @@ main {
     font-weight: 600;
     color: var(--c-purple-dark);
 }
+

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="utf-8">
@@ -7,120 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/index.css">
-    <style>
-        /* Kit card overrides - slightly wider cards with horizontal layout on desktop */
-        .kit-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 32px;
-            flex: 1;
-        }
-        @media (min-width: 768px) {
-            .kit-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-        .kit-card {
-            background: var(--c-white);
-            border-radius: 20px;
-            border: 1px solid rgba(211, 184, 232, 0.2);
-            overflow: hidden;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            display: flex;
-            flex-direction: column;
-        }
-        .kit-card:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-hover);
-            border-color: var(--c-purple);
-        }
-        .kit-image {
-            width: 100%;
-            aspect-ratio: 16/9;
-            object-fit: cover;
-            transition: transform 0.5s ease;
-        }
-        .kit-card:hover .kit-image {
-            transform: scale(1.04);
-        }
-        .kit-image-wrap {
-            overflow: hidden;
-            position: relative;
-        }
-        .kit-body {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            flex: 1;
-        }
-        .kit-tag {
-            font-size: 12px;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--c-purple-dark);
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-        .kit-name {
-            font-family: var(--font-serif);
-            font-size: 22px;
-            color: var(--c-text-main);
-            margin-bottom: 10px;
-        }
-        .kit-desc {
-            font-size: 14px;
-            color: var(--c-text-muted);
-            line-height: 1.6;
-            margin-bottom: 20px;
-        }
-        .kit-items {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 24px;
-        }
-        .kit-item-tag {
-            background: var(--c-purple-light);
-            color: var(--c-purple-dark);
-            font-size: 12px;
-            font-weight: 500;
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-        .kit-footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-        }
-        .kit-price {
-            font-size: 22px;
-            font-weight: 600;
-            color: var(--c-purple-dark);
-        }
-        .kit-old-price {
-            font-size: 14px;
-            text-decoration: line-through;
-            color: var(--c-text-muted);
-            margin-left: 6px;
-        }
-        .kit-btn {
-            background: var(--c-yellow);
-            color: var(--c-text-main);
-            border: 1px solid var(--c-yellow-dark);
-            padding: 12px 24px;
-            border-radius: 30px;
-            font-weight: 600;
-            font-size: 14px;
-            transition: all 0.3s;
-            cursor: pointer;
-        }
-        .kit-btn:hover {
-            background: var(--c-purple-dark);
-            color: var(--c-white);
-            border-color: var(--c-purple-dark);
-        }
-    </style>
 </head>
 <body>
 
@@ -160,110 +46,73 @@
                 <div class="filter-card glass">
                     <h2 class="filter-title">Filtre por</h2>
                     <ul class="filter-list">
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" checked class="custom-checkbox">
-                                <span>Todos os Kits</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="custom-checkbox">
-                                <span>Kit Iniciante</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="custom-checkbox">
-                                <span>Kit Premium</span>
-                            </label>
-                        </li>
-                        <li>
-                            <label class="checkbox-label">
-                                <input type="checkbox" class="custom-checkbox">
-                                <span>Kit Presente</span>
-                            </label>
-                        </li>
+                        <li><label class="checkbox-label"><input type="checkbox" checked class="custom-checkbox"><span>Todos os Kits</span></label></li>
+                        <li><label class="checkbox-label"><input type="checkbox" class="custom-checkbox"><span>Kit Bebelo</span></label></li>
+                        <li><label class="checkbox-label"><input type="checkbox" class="custom-checkbox"><span>Kit Bem Corpus</span></label></li>
+                        <li><label class="checkbox-label"><input type="checkbox" class="custom-checkbox"><span>Kit Bio Instinto</span></label></li>
                     </ul>
                 </div>
             </aside>
 
             <!-- Kit Grid -->
-            <!-- Kit Grid -->
             <div class="product-grid">
 
-                <!-- Kit 1 -->
-                <div class="product-card" data-id="kt1" data-name="Kit Glow Completo" data-price="379.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuC0tsgst4AT_MyfxAxxVa6RK9OweGylTypFQBjyA1VvygTU917ghd-sHfvxR9ZgN5DVmOMoGmtxhY28lImnJ_S89yDGrMZ_byl4fWbt_XWdLeva4jb-m7vasBmN6Jh9La6CXKc31fwE56AsS0A-x1LgbfEAUanLl9bdv2eVrzZGsBUuglEamrFPjwRKbMG9ihGyCYOurrB6-1bf6D9RdZoHekQyCVEkTcUDuK8iJkDAgNXhriJD3dc">
+                <!-- Kit Capilar 1 - Bebelo (Variações de Sabor) -->
+                <div class="product-card" data-id="kt1" data-name="Kit Capilar Bebelo" data-price="26" data-img="https://placehold.co/400x400/e8f5e9/2e7d32?text=Kit+Bebelo" data-variants="Tuti Fruto,Melancia,Banana,Uva">
                     <div class="product-image-wrap">
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0tsgst4AT_MyfxAxxVa6RK9OweGylTypFQBjyA1VvygTU917ghd-sHfvxR9ZgN5DVmOMoGmtxhY28lImnJ_S89yDGrMZ_byl4fWbt_XWdLeva4jb-m7vasBmN6Jh9La6CXKc31fwE56AsS0A-x1LgbfEAUanLl9bdv2eVrzZGsBUuglEamrFPjwRKbMG9ihGyCYOurrB6-1bf6D9RdZoHekQyCVEkTcUDuK8iJkDAgNXhriJD3dc" alt="Kit Glow Completo" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="product-badge"><span class="badge badge-pink">4 Sabores</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=kt1" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/e8f5e9/2e7d32?text=Kit+Bebelo" alt="Kit Capilar Bebelo" style="width:100%;height:100%;object-fit:contain;">
                         </a>
                     </div>
                     <div class="product-info">
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Glow Completo</h3></a>
-                        <span class="product-price">R$ 379,00</span>
+                        <span class="product-category">Kit Capilar</span>
+                        <a href="product.html?id=kt1" style="text-decoration:none;"><h3 class="product-name serif">Kit Capilar Bebelo</h3></a>
+                        <span class="product-price">R$ 26,00</span>
                         <div class="product-actions">
                             <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
+                            <a href="product.html?id=kt1" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kit 2 -->
-                <div class="product-card" data-id="kt2" data-name="Kit Skincare Básico" data-price="310.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM">
+                <!-- Kit Capilar 2 - Bem Corpus -->
+                <div class="product-card" data-id="kt2" data-name="Kit Capilar Bem Corpus" data-price="24" data-img="https://placehold.co/400x400/f9e8f5/9c5fb5?text=Kit+Bem+Corpus" data-variants="Leite Pós Progressiva,Óleo de Coco">
                     <div class="product-image-wrap">
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7etgCQ2AB4nFOzNrn2U8tuJMt9_GcWusBLOCMsMz4Pe9-8xKAIBDAITh-ycL5DOfe-2wRrjCoknJgfHtdtgaQZAtzBncgvMZXMkG52F8vg40AnykJ443OqFc9GZ0e6TPAMCGcoK_gtPPL0a7Skcy4vd10CrVL_FA1FzX_U4oTWtRk4qb2BhhB7vMJaVCJRnjDTjN3Y7hGMdWiBGtbONf-XwkF3sYwECGmtwXx4hVQNu4zduN-1ZM" alt="Kit Skincare Básico" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="product-badge"><span class="badge badge-yellow">Kit Completo</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=kt2" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/f9e8f5/9c5fb5?text=Kit+Bem+Corpus" alt="Kit Capilar Bem Corpus" style="width:100%;height:100%;object-fit:contain;">
                         </a>
                     </div>
                     <div class="product-info">
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Skincare Básico</h3></a>
-                        <span class="product-price">R$ 310,00</span>
+                        <span class="product-category">Kit Capilar</span>
+                        <a href="product.html?id=kt2" style="text-decoration:none;"><h3 class="product-name serif">Kit Capilar Bem Corpus</h3></a>
+                        <span class="product-price">R$ 24,00</span>
                         <div class="product-actions">
                             <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
+                            <a href="product.html?id=kt2" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Kit 3 -->
-                <div class="product-card" data-id="kt3" data-name="Kit Presente Luxo" data-price="490.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc">
+                <!-- Kit Capilar 3 - Bio Instinto (Variações) -->
+                <div class="product-card" data-id="kt3" data-name="Kit Capilar Bio Instinto" data-price="25" data-img="https://placehold.co/400x400/fff5cc/b8860b?text=Kit+Bio+Instinto" data-variants="Caché Amos,Descansa Cabelo,Óleo de Argan,Liso com Força,Mamona e Babosa">
                     <div class="product-image-wrap">
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiAHgxS82ohnk2LGmzGffb3WIB0YmdMQ2ti8kt6YgRhQ4_vAPUGPs_53FeE72elBhTNr90f8LjO8UzK7upzUVnR8fpPpiwLf3Fq7fqkognrBR4jc6th2Z-qIFj9aWZpKI2f9FXMFhiIc5tIRLUfp9k78rShaCjOcAOR4dL1DH8iPjAcnO8pvm30DGn8HfC2hupZsmEIBwKGpSe9gCMaVXI1Je4j25GkMWD3fiz1l2-1plO7HZ5qOc" alt="Kit Presente Luxo" style="width:100%;height:100%;object-fit:cover;">
+                        <div class="product-badge"><span class="badge badge-pink">5 Linhas</span></div>
+                        <button class="fav-btn"><span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span></button>
+                        <a href="product.html?id=kt3" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
+                            <img src="https://placehold.co/400x400/fff5cc/b8860b?text=Kit+Bio+Instinto" alt="Kit Capilar Bio Instinto" style="width:100%;height:100%;object-fit:contain;">
                         </a>
                     </div>
                     <div class="product-info">
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Presente Luxo</h3></a>
-                        <span class="product-price">R$ 490,00</span>
+                        <span class="product-category">Kit Capilar</span>
+                        <a href="product.html?id=kt3" style="text-decoration:none;"><h3 class="product-name serif">Kit Capilar Bio Instinto</h3></a>
+                        <span class="product-price">R$ 25,00</span>
                         <div class="product-actions">
                             <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Kit 4 -->
-                <div class="product-card" data-id="kt4" data-name="Kit Maquiagem Completa" data-price="425.00" data-img="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Z5BpRGdySHnOQaP8VS2f0lZS2I7jliRbS4zHpnO_BbMyUqja8exnxEb1_maMDLipjs3kDk0ZLYSCOInf9zSV2AsLQbG3Y2mSmwcwcEhes8hnc9B_i80Kx0q-_GwIyUTO16ub_r5KnftP8DthkplcKx4yuZkRk8azC1e6-wZGlIGZB9MKZBsQ7TvYc5v6DqoCo7bkj-HDXES6y2qqDwG4toehgekKiQbz93QBCBo4-1Ks_uweJkM">
-                    <div class="product-image-wrap">
-                        <a href="product.html" style="display:block;width:100%;height:100%;position:absolute;top:0;left:0;z-index:1;">
-                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5Z5BpRGdySHnOQaP8VS2f0lZS2I7jliRbS4zHpnO_BbMyUqja8exnxEb1_maMDLipjs3kDk0ZLYSCOInf9zSV2AsLQbG3Y2mSmwcwcEhes8hnc9B_i80Kx0q-_GwIyUTO16ub_r5KnftP8DthkplcKx4yuZkRk8azC1e6-wZGlIGZB9MKZBsQ7TvYc5v6DqoCo7bkj-HDXES6y2qqDwG4toehgekKiQbz93QBCBo4-1Ks_uweJkM" alt="Kit Maquiagem Completa" style="width:100%;height:100%;object-fit:cover;">
-                        </a>
-                    </div>
-                    <div class="product-info">
-                        <a href="product.html" style="text-decoration:none;"><h3 class="product-name serif">Kit Maquiagem Completa</h3></a>
-                        <span class="product-price">R$ 425,00</span>
-                        <div class="product-actions">
-                            <button class="add-btn add-to-cart-quick">COMPRAR</button>
-                            <a href="product.html" class="view-btn" title="Visualizar Produto">
-                                <span class="material-symbols-outlined">visibility</span>
-                            </a>
+                            <a href="product.html?id=kt3" class="view-btn" title="Visualizar Produto"><span class="material-symbols-outlined">visibility</span></a>
                         </div>
                     </div>
                 </div>
@@ -313,3 +162,5 @@
     <script src="assets/js/script.js"></script>
 </body>
 </html>
+
+
